@@ -1,0 +1,52 @@
+<html ng-app="avoider">
+  
+  <head>
+    <title>Achievements</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="../styles/styles.css"></link>
+  </head>
+
+  <body>
+  
+    <ng-include src="'../views/partials/header'"></ng-include>
+    
+    <div ng-controller="achievementsController">
+      
+      <h1 class="text-center" id='achievements-header'>Game Achievements</h1>
+      
+      <table id='achievements-table'>
+        
+        <tr ng-repeat='achievement in levelAchievements' ng-class="{'unlocked': hasAchievement(achievement.name), 'locked': !hasAchievement(achievement.name) }">
+          <td><img class='achievement-img' src='../images/{{ achievement.src }}' alt='{{ achievement.name }}'</td>
+          <td class='level'><strong>Reach {{ achievement.name }}</strong></td>
+          <td>Survive for {{ achievement.value }} seconds</td>
+          <td>{{ achievement.points }} points</td>
+        </tr>
+        
+        <tr ng-repeat='achievement in gameAchievements' ng-class="{'unlocked': hasAchievement(achievement.name), 'locked': !hasAchievement(achievement.name)}">
+          <td><img class='achievement-img' src='../images/{{ achievement.src }}' alt='{{ achievement.name }}'</td>
+          <td class='games-played'><strong>{{ achievement.name }}</strong></td>
+          <td>Play {{ achievement.value }} games</td>
+          <td>{{ achievement.points }} points</td>
+        </tr>
+        
+        <tr ng-repeat='achievement in scoreAchievements' ng-class="{'unlocked': hasAchievement(achievement.name), 'locked': !hasAchievement(achievement.name)}">
+          <td><img class='achievement-img' src='../images/{{ achievement.src }}' alt='{{ achievement.name }}'</td>
+          <td class='total-score'><strong>{{ achievement.name }}</strong></td>
+          <td>Reach a cumulative score of {{ achievement.value }}</td>
+          <td>{{ achievement.points }} points</td>
+        </tr>
+        
+    </div>
+    
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/controllers/navController.js"></script>
+    <script src="../scripts/controllers/achievementsController.js"></script>
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/main.js"></script>
+    
+  </body>
+
+</html>

@@ -1,0 +1,76 @@
+<html ng-app="avoider">
+  <head>
+    <title>Avoider Shop</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="../styles/styles.css"></link>
+  </head>
+  
+  <body>
+  
+    <ng-include src="'../views/partials/header'"></ng-include>
+    
+    <div ng-controller="shopController">
+      
+      <h1 class="text-center" id="header-shop">Avoider Shop</h1>
+      
+      <div id='purchase-notification' ng-class="orderStatus['rejected'] ? 'rejected': 'accepted'">
+        <span ng-if="orderStatus['rejected']">You don't have enough coins to make this purchase</span>
+        <span ng-if="!orderStatus['rejected']">Your purchase has been confirmed</span>
+      </div>
+      
+      <div id="shop-categories">
+        <span id="characters" ng-click="changeCategory('characters')">Characters</span>
+        <span id="enemies" ng-click="changeCategory('enemies')">Enemies</span>
+      </div>
+      
+      <table id="shop-table">
+        
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Preview</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        
+         <tbody>
+          <tr ng-if="category == 'characters'" ng-repeat="character in characters">
+            <td class="item">{{ character.name }}</td>
+            <td>
+              <svg height="50" width="100">
+                <line x1="0" y1="25" x2="200" y2="25" style="stroke:{{character.color}};stroke-width:10" />
+              </svg>
+            </td>
+            <td>
+              <span ng-if="purchased(character.name)" ng-click="purchaseItem($event)" class="coins-badge">{{ character.price }}</span>            
+              <span ng-if="!purchased(character.name)">Purchased</span>
+            </td>
+          </tr>
+          <tr ng-if="category == 'enemies'" ng-repeat="enemy in enemies">
+            <td class="item">{{ enemy.name }}</td>
+            <td>
+              <img src="../images/{{ enemy.name }}.png" />
+            </td>
+            <td>
+              <span ng-if="purchased(enemy.name)" ng-click="purchaseItem($event)" class="coins-badge">{{ enemy.price }}</span>            
+              <span ng-if="!purchased(enemy.name)">Purchased</span>
+            </td>
+          </tr>
+        </tbody>
+        
+      </table>
+      
+    </div>
+    
+    <ng-include src="'../views/partials/footer'"></ng-include>
+    
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/controllers/navController.js"></script>
+    <script src="../scripts/controllers/shopController.js"></script>
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

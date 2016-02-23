@@ -1,0 +1,218 @@
+body {
+  background: blueviolet;
+  font: 14px/21px Arial,Helvetica,sans-serif;
+}
+
+h1 {
+  margin-top: 5%;
+}
+
+canvas {
+  border: 3px solid black;
+  background: beige;
+}
+
+table {
+  width: 65%;
+  margin: 5% auto;
+}
+
+tr {
+  border: 3px solid black;
+}
+
+td {
+  padding: 15px;
+}
+
+footer {
+  margin-top: 3%;
+}
+
+/* Navigation */
+
+#avoider {
+  color: aqua;
+}
+
+#coins-display {
+  position: fixed;
+  top: 15px;
+  margin-left: 30%;
+  color: white;
+}
+
+.coins-badge {
+  padding: 2px 5px;
+  background: gold;
+  border-radius: 50%;
+}
+
+#game-board {
+  width: 40%;
+  margin: 0 auto;
+}
+
+/* Game information */
+
+#notification {
+  min-height: 50px;
+  background: gold;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 5px;
+  width: 93%;
+  visibility: hidden;
+}
+
+#level, #time, #coins {
+  font-weight: bold;
+}
+
+#time, #coins {
+  margin-left: 5%;
+}
+
+/* How To Play */
+
+#game-help {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* Frequently Asked Questions */
+
+#questions-block {
+  margin: 3% 20%;
+  background: burlywood;
+  padding: 2% 5%;
+  border: 3px solid purple;
+}
+
+/* Achievements */
+
+#achievements-header {
+  color: gold;
+}
+
+#achievements-summary {
+  background: silver;
+  width: 65%;
+  margin: 2% auto 0 auto;
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#achievements-table {
+  margin-top: 0;
+}
+
+.locked { background: #888888; }
+.locked:hover { background: dimgray; }
+.unlocked { background: #FFCC00; }
+.unlocked:hover { background: goldenrod; }
+
+.achievement-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* Scores */
+
+h1#high-scores {
+  color: goldenrod;
+}
+
+#scores-header {
+  background: orange;
+  height: 60px;
+  text-indent: 2%;
+}
+
+.gold { background: gold; }
+.silver { background: silver; }
+.bronze { background: #8C7853; }
+.top-five {background: green; }
+
+/* Shop */
+
+#header-shop {
+  color: aqua;
+}
+
+#shop-categories {
+  width: 65%;
+  margin: 0 auto;
+  background: silver;
+  padding: 0.5%;
+  font-weight: bold;
+}
+
+#enemies {
+  margin-left: 5%;
+}
+
+#purchase-notification {
+  min-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 4px;
+  width: 65%;
+  margin: 0 auto;
+  visibility: hidden;
+}
+
+.rejected { background: red; }
+.rejected:hover { background: crimson; }
+.accepted { background: forestgreen; }
+
+#shop-table {
+  margin: 0 auto 4% auto;
+}
+
+#shop-table th{
+  text-indent: 2%;
+  padding: 2% 0;
+  background: orange;
+}
+
+#shop-table tbody tr {
+  background: antiquewhite;
+}
+
+#shop-table tbody tr:hover {
+  background: burlywood;
+}
+
+#shop-table .coins-badge:hover {
+  cursor: pointer;
+}
+
+/* Related */
+
+#games-block {
+  background: azure;
+  width: 60%;
+  margin: 2% auto;
+  padding: 2% 10%;
+}
+
+.game-section {
+  margin: 0 auto;
+}
+
+#shapes { color: chocolate; }
+#header-game { color: maroon; }
+#snake { color: magenta; }
+#online { color: chartreuse; }
+#fun { color: red; }
+#math { color: #ff8c00; }
+#game { color: gold; }
+#canvas { color: violet; }
+#pong { color: green; }
+

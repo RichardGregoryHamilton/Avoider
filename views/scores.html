@@ -1,0 +1,47 @@
+<html ng-app="avoider">
+  
+  <head>
+    <title>Scores</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="../styles/styles.css"></link>
+  </head>
+
+  <body>
+  
+    <ng-include src="'../views/partials/header'"></ng-include>
+    
+    <div ng-controller="scoresController">
+    
+      <h1 class="text-center" id="high-scores">High Scores</h1>
+      
+      <table id='scores-table' ng-controller='scoresController'>
+
+        <tr id='scores-header'>
+          <th>Ranking</th>
+          <th>Score</th>
+          <th>Level</th>
+        </tr>
+        
+        <tr ng-repeat='score in scoreData' class='{{score.class}}'>
+          <td><strong>Rank {{ $index + 1 }}</strong></td>
+          <td>{{ score.score }}</td>
+          <td>{{ score.level }}</td>
+        </tr>
+
+      </table>
+      
+    </div>
+    
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/jcanvas.min.js"></script>
+    <script src="../scripts/thenby.min.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/controllers/navController.js"></script>
+    <script src="../scripts/controllers/scoresController.js"></script>
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/main.js"></script>
+    
+  </body>
+
+</html>

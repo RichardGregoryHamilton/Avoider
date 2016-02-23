@@ -1,0 +1,37 @@
+<html ng-app="avoider">
+	
+	<head>
+		<title>How To Play</title>
+		<link rel="stylesheet" href="../styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="../styles/styles.css" />
+	</head>
+
+	<body>
+		
+		<ng-include src="'../views/partials/header'"></ng-include>
+		
+		<h1 class="text-center">Frequently Asked Questions</h1>
+
+    <div id="questions-block">
+      <h3>Question 1: What is this game?</h3>
+      <p>Answer: This is an arcade game</p>
+
+      <h3>Question 2: How do you score points?</h3>
+      <p>Answer: You score points by dodging your enemies for as long as possible</p>
+
+      <h3>Question 3: Do you have to create an account?</h3>
+      <p>Answer: No. Best of all, this game can be played without signing up.</p>
+
+      <h3>Question 4: Do you have to pay to play this game?</h3>
+      <p>Answer: Unlike most games, this one is completely free.</p>
+    </div>
+		
+    <ng-include src="'../views/partials/footer'"></ng-include>
+    
+		<script src="../scripts/angular.min.js"></script>
+		<script src="../scripts/app.js"></script>
+		<script src="../scripts/controllers/navController.js"></script>
+		
+	</body>
+
+</html>
