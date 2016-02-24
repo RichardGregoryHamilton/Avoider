@@ -83,8 +83,16 @@ app.get("/scripts/main.js", function(req, res) {
     res.sendFile(scripts + "/main.js");
 });
 
-app.get("/scripts/pong.js", function(req, res) {
-    res.sendFile(scripts + "/pong.js");
+app.get("/scripts/enemies.js", function(req, res) {
+	res.sendFile(scripts + "/enemies.js");
+});
+
+app.get("/scripts/scores.js", function(req, res) {
+	res.sendFile(scripts + "/scores.js");
+});
+
+app.get("/scripts/achievements.js", function(req, res) {
+	res.sendFile(scripts + "/achievements.js");
 });
 
 app.get("/scripts/services/game.js", function(req, res) {
