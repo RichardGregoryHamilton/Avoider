@@ -12,9 +12,18 @@ canvas {
   background: beige;
 }
 
-table {
-  width: 65%;
-  margin: 5% auto;
+@media screen and (min-width: 720px) {
+  table {
+    width: 65%;
+    margin: 5% auto;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  table {
+    width: 100%;
+    margin: 5% auto;
+  }
 }
 
 tr {
@@ -31,7 +40,7 @@ footer {
 
 /* Navigation */
 
-#avoider {
+#avoider, #avoider-header {
   color: aqua;
 }
 
@@ -48,9 +57,17 @@ footer {
   border-radius: 50%;
 }
 
-#game-board {
-  width: 40%;
-  margin: 0 auto;
+@media screen and (min-width: 720px) {
+  #game-board {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #game-board {
+    width: 100%;
+  }
 }
 
 /* Game information */
@@ -62,7 +79,7 @@ footer {
   font-size: 20px;
   text-align: center;
   padding: 10px 5px;
-  width: 93%;
+  width: 90%;
   visibility: hidden;
 }
 
@@ -76,18 +93,68 @@ footer {
 
 /* How To Play */
 
+#help-header {
+  color: gold;
+}
+
 #game-help {
-  width: 60%;
   margin: 0 auto;
+  background: azure;
+  padding: 1%;
+}
+
+@media screen and (min-width: 720px) {
+  #game-help {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  #game-help {
+    width: 100%;
+  }
 }
 
 /* Frequently Asked Questions */
 
+#faq-header {
+  color: silver;
+}
+
 #questions-block {
-  margin: 3% 20%;
   background: burlywood;
   padding: 2% 5%;
   border: 3px solid purple;
+}
+
+#questions-block h3 {
+  color: darkblue;
+}
+
+.question {
+  border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 720px) {
+  
+  #questions-block {
+    margin: 3% 20%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  #faq-header {
+    margin-top: 15%;
+    font-size: 2em;
+  }
+  
+  #questions-block {
+    margin: 0;
+  }
+  
+  #questions-block h3 {
+    font-size: 1.3em;
+  }
 }
 
 /* Achievements */
@@ -145,15 +212,35 @@ h1#high-scores {
 }
 
 #shop-categories {
-  width: 65%;
-  margin: 0 auto;
-  background: silver;
-  padding: 0.5%;
-  font-weight: bold;
+    width: 65%;
+    margin: 0 auto;
+    background: silver;
+    padding: 0.5%;
+    font-weight: bold;
+  }
+  
+@media screen and (min-width: 720px) {
+  #shop-categories {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  #header-shop {
+    margin-top: 15%;
+  }
+  
+  #shop-categories {
+    width: 100%;
+  }
+}
+
+#characters, #enemies {
+  cursor: pointer;
 }
 
 #enemies {
-  margin-left: 5%;
+  margin-left: 28%;
 }
 
 #purchase-notification {
@@ -195,11 +282,26 @@ h1#high-scores {
 
 /* Related */
 
+#related-header {
+  color: silver;
+}
+
 #games-block {
   background: azure;
-  width: 60%;
   margin: 2% auto;
   padding: 2% 10%;
+}
+  
+@media screen and (min-width: 720px) {
+  #games-block {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  #games-block {
+    width: 100%;
+  }
 }
 
 .game-section {
